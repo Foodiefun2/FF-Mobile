@@ -13,6 +13,7 @@
 		A2DC1F2423C3C86200A7DE23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F2223C3C86200A7DE23 /* Main.storyboard */; };
 		A2DC1F2623C3C86300A7DE23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F2523C3C86300A7DE23 /* Assets.xcassets */; };
 		A2DC1F2923C3C86300A7DE23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F2723C3C86300A7DE23 /* LaunchScreen.storyboard */; };
+		A2DC1F3123C3C94C00A7DE23 /* SignUpLogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F3023C3C94C00A7DE23 /* SignUpLogIn.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A2DC1F2523C3C86300A7DE23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2DC1F2823C3C86300A7DE23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2DC1F2A23C3C86300A7DE23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DC1F3023C3C94C00A7DE23 /* SignUpLogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpLogIn.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +61,21 @@
 				A2DC1F1C23C3C86200A7DE23 /* AppDelegate.swift */,
 				A2DC1F1E23C3C86200A7DE23 /* SceneDelegate.swift */,
 				A2DC1F2023C3C86200A7DE23 /* ViewController.swift */,
-				A2DC1F2223C3C86200A7DE23 /* Main.storyboard */,
+				A2DC1F3223C3C95A00A7DE23 /* Storyboards */,
 				A2DC1F2523C3C86300A7DE23 /* Assets.xcassets */,
-				A2DC1F2723C3C86300A7DE23 /* LaunchScreen.storyboard */,
 				A2DC1F2A23C3C86300A7DE23 /* Info.plist */,
 			);
 			path = FoodieFun;
+			sourceTree = "<group>";
+		};
+		A2DC1F3223C3C95A00A7DE23 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A2DC1F2223C3C86200A7DE23 /* Main.storyboard */,
+				A2DC1F2723C3C86300A7DE23 /* LaunchScreen.storyboard */,
+				A2DC1F3023C3C94C00A7DE23 /* SignUpLogIn.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DC1F3123C3C94C00A7DE23 /* SignUpLogIn.storyboard in Resources */,
 				A2DC1F2923C3C86300A7DE23 /* LaunchScreen.storyboard in Resources */,
 				A2DC1F2623C3C86300A7DE23 /* Assets.xcassets in Resources */,
 				A2DC1F2423C3C86200A7DE23 /* Main.storyboard in Resources */,
