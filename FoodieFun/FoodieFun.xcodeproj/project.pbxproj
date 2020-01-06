@@ -16,6 +16,7 @@
 		A2DC1F3123C3C94C00A7DE23 /* SignUpLogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F3023C3C94C00A7DE23 /* SignUpLogIn.storyboard */; };
 		A2DC1F3423C3CE9B00A7DE23 /* SignUpLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DC1F3323C3CE9B00A7DE23 /* SignUpLogInViewController.swift */; };
 		A2DC1F3723C3DA2C00A7DE23 /* AddNewDish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F3623C3DA2C00A7DE23 /* AddNewDish.storyboard */; };
+		A2DC1F3923C3E82500A7DE23 /* AddNewRestaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F3823C3E82500A7DE23 /* AddNewRestaurant.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A2DC1F3023C3C94C00A7DE23 /* SignUpLogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpLogIn.storyboard; sourceTree = "<group>"; };
 		A2DC1F3323C3CE9B00A7DE23 /* SignUpLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLogInViewController.swift; sourceTree = "<group>"; };
 		A2DC1F3623C3DA2C00A7DE23 /* AddNewDish.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewDish.storyboard; sourceTree = "<group>"; };
+		A2DC1F3823C3E82500A7DE23 /* AddNewRestaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewRestaurant.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				A2DC1F2723C3C86300A7DE23 /* LaunchScreen.storyboard */,
 				A2DC1F3023C3C94C00A7DE23 /* SignUpLogIn.storyboard */,
 				A2DC1F3623C3DA2C00A7DE23 /* AddNewDish.storyboard */,
+				A2DC1F3823C3E82500A7DE23 /* AddNewRestaurant.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DC1F3923C3E82500A7DE23 /* AddNewRestaurant.storyboard in Resources */,
 				A2DC1F3123C3C94C00A7DE23 /* SignUpLogIn.storyboard in Resources */,
 				A2DC1F2923C3C86300A7DE23 /* LaunchScreen.storyboard in Resources */,
 				A2DC1F2623C3C86300A7DE23 /* Assets.xcassets in Resources */,
