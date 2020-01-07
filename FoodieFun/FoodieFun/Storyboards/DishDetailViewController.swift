@@ -1,33 +1,26 @@
 //
-//  SignUpLogInViewController.swift
+//  DishDetailViewController.swift
 //  FoodieFun
 //
-//  Created by Alex Shillingford on 1/6/20.
+//  Created by Alex Shillingford on 1/7/20.
 //  Copyright © 2020 Alex Shillingford. All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable class SignUpLogInViewController: UIViewController {
+class DishDetailViewController: UIViewController {
     
-    @IBOutlet weak var signUpLogInSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
-    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var dishDetailImageView: UIImageView!
+    @IBOutlet weak var dishDetailNameLabel: UILabel!
+    @IBOutlet weak var dishDetailRatingLabel: UILabel!
+    @IBOutlet weak var dishDetailCuisineLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func signUpButtonTapped(_ sender: UIButton) {
-        
-    }
-    
     
 
     /*

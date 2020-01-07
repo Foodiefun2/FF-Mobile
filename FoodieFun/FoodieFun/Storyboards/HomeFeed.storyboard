@@ -17,7 +17,7 @@
                         <color key="backgroundColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="76e-pj-6PG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HomeRestaurantCell" rowHeight="100" id="76e-pj-6PG" customClass="HomeRestaurantsTableViewCell" customModule="FoodieFun" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76e-pj-6PG" id="61u-ux-wfc">
@@ -59,6 +59,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="restaurantDetailLabel" destination="LbG-h3-blr" id="oos-Sz-XqE"/>
+                                    <outlet property="restaurantImageView" destination="YWv-n3-dMF" id="xHi-iB-1Cz"/>
+                                    <outlet property="restaurantNameLabel" destination="cej-KV-e5G" id="uz4-t6-UUa"/>
                                     <segue destination="7aq-4X-J7u" kind="show" id="cL1-fU-yhc"/>
                                 </connections>
                             </tableViewCell>
@@ -76,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="142.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Detail View Controller-->
         <scene sceneID="Cy6-BZ-Qco">
             <objects>
-                <viewController id="7aq-4X-J7u" sceneMemberID="viewController">
+                <viewController id="7aq-4X-J7u" customClass="RestaurantDetailViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCS-Hd-jPQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,22 +168,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJM-w4-iAg">
-                                <rect key="frame" x="20" y="434" width="67" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJM-w4-iAg">
+                                <rect key="frame" x="20" y="434" width="76.5" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8lL-Uz-4hx">
-                                <rect key="frame" x="20" y="467.5" width="374" height="245"/>
-                                <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="245" id="9Sf-eW-ciQ"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-H3-RyS">
                                 <rect key="frame" x="358" y="772" width="36" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -197,6 +190,49 @@
                                 <color key="textColor" red="0.9137254901960784" green="0.90588235294117647" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kH4-IP-7Iv">
+                                <rect key="frame" x="20" y="467.5" width="374" height="296.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantReviewCell" id="IE2-1f-y6v" customClass="RestaurantReviewTableViewCell" customModule="FoodieFun" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IE2-1f-y6v" id="8QC-Uo-Wwk">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Date Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-Xm-tie">
+                                                    <rect key="frame" x="20" y="11" width="82" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.91372549020000005" green="0.90588235289999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Review Preview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOk-nq-Fel">
+                                                    <rect key="frame" x="147.5" y="11" width="206.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.91372549020000005" green="0.90588235289999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="lcj-Xm-tie" firstAttribute="top" secondItem="8QC-Uo-Wwk" secondAttribute="topMargin" id="7W7-Hl-8sr"/>
+                                                <constraint firstItem="DOk-nq-Fel" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lcj-Xm-tie" secondAttribute="trailing" constant="16" id="TMm-fw-Eg8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lcj-Xm-tie" secondAttribute="bottom" id="cdr-CF-6Ez"/>
+                                                <constraint firstItem="lcj-Xm-tie" firstAttribute="leading" secondItem="8QC-Uo-Wwk" secondAttribute="leadingMargin" id="fCn-zy-nYw"/>
+                                                <constraint firstItem="DOk-nq-Fel" firstAttribute="bottom" secondItem="8QC-Uo-Wwk" secondAttribute="bottomMargin" id="kXr-ok-yuS"/>
+                                                <constraint firstItem="DOk-nq-Fel" firstAttribute="top" secondItem="8QC-Uo-Wwk" secondAttribute="topMargin" id="qvo-jy-3zY"/>
+                                                <constraint firstItem="DOk-nq-Fel" firstAttribute="trailing" secondItem="8QC-Uo-Wwk" secondAttribute="trailingMargin" id="utK-sj-SOL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="lcj-Xm-tie" id="g9s-wr-cwv"/>
+                                            <outlet property="restaurantReviewPreviewLabel" destination="DOk-nq-Fel" id="xAC-b4-1kg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -206,14 +242,14 @@
                             <constraint firstItem="cZX-a1-tZW" firstAttribute="top" secondItem="m9f-Ve-7Ny" secondAttribute="top" id="IJE-51-ekG"/>
                             <constraint firstItem="RXh-BJ-N2n" firstAttribute="top" secondItem="SVb-jG-gvv" secondAttribute="bottom" constant="-1.5" id="JNK-7X-KvX"/>
                             <constraint firstItem="uyh-O6-fMZ" firstAttribute="leading" secondItem="qHD-u4-EM0" secondAttribute="trailing" constant="27" id="Ol5-gU-hwo"/>
-                            <constraint firstItem="m9f-Ve-7Ny" firstAttribute="trailing" secondItem="8lL-Uz-4hx" secondAttribute="trailing" constant="20" id="PL5-cp-v38"/>
                             <constraint firstItem="cZX-a1-tZW" firstAttribute="leading" secondItem="m9f-Ve-7Ny" secondAttribute="leading" id="QT6-AJ-R83"/>
+                            <constraint firstItem="kH4-IP-7Iv" firstAttribute="leading" secondItem="m9f-Ve-7Ny" secondAttribute="leading" constant="20" id="RYW-8J-Ofa"/>
                             <constraint firstItem="5CD-gv-7db" firstAttribute="leading" secondItem="m9f-Ve-7Ny" secondAttribute="leading" constant="20" id="TCB-v6-UET"/>
                             <constraint firstItem="cZX-a1-tZW" firstAttribute="trailing" secondItem="m9f-Ve-7Ny" secondAttribute="trailing" id="Tjo-Pk-jwd"/>
                             <constraint firstAttribute="trailing" secondItem="6cf-JW-ARw" secondAttribute="trailing" constant="20" id="Tp1-2k-MMt"/>
                             <constraint firstItem="389-fO-PCe" firstAttribute="top" secondItem="bW8-TP-86F" secondAttribute="bottom" constant="8" id="Wdy-kt-5g3"/>
                             <constraint firstItem="uyh-O6-fMZ" firstAttribute="top" secondItem="6cf-JW-ARw" secondAttribute="bottom" constant="14" id="YiM-mF-dk4"/>
-                            <constraint firstItem="8lL-Uz-4hx" firstAttribute="top" secondItem="eJM-w4-iAg" secondAttribute="bottom" constant="8" id="YqX-5j-0N3"/>
+                            <constraint firstItem="vf2-H3-RyS" firstAttribute="top" secondItem="kH4-IP-7Iv" secondAttribute="bottom" constant="8" id="bow-Wr-CO8"/>
                             <constraint firstItem="6cf-JW-ARw" firstAttribute="top" secondItem="389-fO-PCe" secondAttribute="bottom" constant="1" id="chV-vH-xOL"/>
                             <constraint firstItem="SVb-jG-gvv" firstAttribute="top" secondItem="bW8-TP-86F" secondAttribute="bottom" constant="28" id="coc-c4-7QC"/>
                             <constraint firstItem="U6a-RC-mA4" firstAttribute="top" secondItem="cZX-a1-tZW" secondAttribute="bottom" constant="8" id="eUP-Zs-YWP"/>
@@ -222,13 +258,14 @@
                             <constraint firstItem="LMv-7f-1bU" firstAttribute="top" secondItem="U6a-RC-mA4" secondAttribute="bottom" constant="8" id="hxc-Oo-zS0"/>
                             <constraint firstItem="6cf-JW-ARw" firstAttribute="leading" secondItem="SVb-jG-gvv" secondAttribute="trailing" constant="8" id="iCN-IU-vC1"/>
                             <constraint firstItem="m9f-Ve-7Ny" firstAttribute="trailing" secondItem="389-fO-PCe" secondAttribute="trailing" constant="20" id="jwl-ig-8xl"/>
+                            <constraint firstItem="kH4-IP-7Iv" firstAttribute="top" secondItem="eJM-w4-iAg" secondAttribute="bottom" constant="8" id="kef-6e-YhY"/>
                             <constraint firstItem="m9f-Ve-7Ny" firstAttribute="trailing" secondItem="vf2-H3-RyS" secondAttribute="trailing" constant="20" id="lir-zS-Oe6"/>
                             <constraint firstItem="m9f-Ve-7Ny" firstAttribute="trailing" secondItem="uyh-O6-fMZ" secondAttribute="trailing" constant="20" id="o4e-Mr-5d3"/>
                             <constraint firstItem="qHD-u4-EM0" firstAttribute="top" secondItem="RXh-BJ-N2n" secondAttribute="bottom" constant="-3.5" id="qXh-ki-yTM"/>
+                            <constraint firstItem="m9f-Ve-7Ny" firstAttribute="trailing" secondItem="kH4-IP-7Iv" secondAttribute="trailing" constant="20" id="sZp-tt-YrA"/>
                             <constraint firstItem="m9f-Ve-7Ny" firstAttribute="trailing" secondItem="9AQ-hV-mM4" secondAttribute="trailing" constant="20" id="snh-nc-lhg"/>
                             <constraint firstItem="eJM-w4-iAg" firstAttribute="leading" secondItem="m9f-Ve-7Ny" secondAttribute="leading" constant="20" id="tZe-8k-Hfd"/>
                             <constraint firstItem="5CD-gv-7db" firstAttribute="top" secondItem="LMv-7f-1bU" secondAttribute="bottom" constant="8" id="tdV-Px-P6E"/>
-                            <constraint firstItem="8lL-Uz-4hx" firstAttribute="leading" secondItem="m9f-Ve-7Ny" secondAttribute="leading" constant="20" id="wfT-hT-3a2"/>
                             <constraint firstItem="U6a-RC-mA4" firstAttribute="leading" secondItem="m9f-Ve-7Ny" secondAttribute="leading" constant="20" id="wwp-Ea-nKL"/>
                             <constraint firstItem="9AQ-hV-mM4" firstAttribute="top" secondItem="389-fO-PCe" secondAttribute="bottom" constant="18" id="xxu-pN-e1w"/>
                             <constraint firstItem="LMv-7f-1bU" firstAttribute="leading" secondItem="m9f-Ve-7Ny" secondAttribute="leading" constant="20" id="y76-20-cRH"/>
@@ -236,6 +273,16 @@
                         <viewLayoutGuide key="safeArea" id="m9f-Ve-7Ny"/>
                     </view>
                     <navigationItem key="navigationItem" id="U5E-eP-EpN"/>
+                    <connections>
+                        <outlet property="fridaySaturdayHoursLabel" destination="9AQ-hV-mM4" id="Mm8-AP-xNI"/>
+                        <outlet property="mondayThursdayHoursLabel" destination="6cf-JW-ARw" id="5P5-aR-i77"/>
+                        <outlet property="restaurantDetailAddressTextView" destination="5CD-gv-7db" id="By0-XR-9r4"/>
+                        <outlet property="restaurantDetailCuisineLabel" destination="bW8-TP-86F" id="WOS-Xj-NkD"/>
+                        <outlet property="restaurantDetailImageView" destination="cZX-a1-tZW" id="ZAi-NY-KxY"/>
+                        <outlet property="restaurantDetailNameLabel" destination="U6a-RC-mA4" id="RZf-Tn-Pru"/>
+                        <outlet property="restaurantDetailRatingLabel" destination="u3a-1p-Ewd" id="OAb-uw-c44"/>
+                        <outlet property="sundayHoursLabel" destination="uyh-O6-fMZ" id="kD3-n8-Oo1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVC-2o-rjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

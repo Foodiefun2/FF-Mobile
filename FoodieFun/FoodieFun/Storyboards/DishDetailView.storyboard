@@ -10,13 +10,13 @@
         <!--Restaurant Dishes-->
         <scene sceneID="DJa-Zm-c5T">
             <objects>
-                <tableViewController id="RX2-gs-cTs" sceneMemberID="viewController">
+                <tableViewController id="RX2-gs-cTs" customClass="DishesTableViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F6f-1B-Mq9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.094117647058823528" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DishDetailCell" rowHeight="100" id="g8K-rf-lEZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DishDetailCell" rowHeight="100" id="g8K-rf-lEZ" customClass="DishesTableViewCell" customModule="FoodieFun" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8K-rf-lEZ" id="v4u-Ry-2d5">
@@ -61,6 +61,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.094117647058823528" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="dishTableImageView" destination="Gbl-us-47P" id="8JX-n2-p82"/>
+                                    <outlet property="dishTableNameLabel" destination="3S8-4u-tMN" id="L2V-hv-Rim"/>
+                                    <outlet property="dishTableReviewPreviewTextView" destination="wNp-vm-JHT" id="7f8-jA-mNa"/>
                                     <segue destination="UWg-tn-dYe" kind="show" id="Vt4-wN-b0W"/>
                                 </connections>
                             </tableViewCell>
@@ -76,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="154.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Dish Detail View Controller-->
         <scene sceneID="F8S-63-SRl">
             <objects>
-                <viewController id="UWg-tn-dYe" sceneMemberID="viewController">
+                <viewController id="UWg-tn-dYe" customClass="DishDetailViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zil-77-IST">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,30 +131,41 @@
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DishReviewCell" textLabel="yh5-CM-GlW" detailTextLabel="f1K-Hm-8o3" style="IBUITableViewCellStyleValue1" id="saN-YL-3QD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DishReviewCell" id="saN-YL-3QD" customClass="DishDetailReviewTableViewCell" customModule="FoodieFun" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="saN-YL-3QD" id="bdY-rS-z3d">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yh5-CM-GlW">
-                                                    <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWV-pd-oYL">
+                                                    <rect key="frame" x="20" y="11" width="82" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.91372549020000005" green="0.90588235289999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1K-Hm-8o3">
-                                                    <rect key="frame" x="310" y="12" width="44" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish Review Preview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXR-ew-O1L">
+                                                    <rect key="frame" x="196.5" y="11" width="157.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.91372549020000005" green="0.90588235289999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mWV-pd-oYL" secondAttribute="bottom" id="3Qx-xq-QPe"/>
+                                                <constraint firstItem="mWV-pd-oYL" firstAttribute="leading" secondItem="bdY-rS-z3d" secondAttribute="leadingMargin" id="Hn8-jR-3pV"/>
+                                                <constraint firstItem="XXR-ew-O1L" firstAttribute="trailing" secondItem="bdY-rS-z3d" secondAttribute="trailingMargin" id="W5G-qY-OVF"/>
+                                                <constraint firstItem="XXR-ew-O1L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mWV-pd-oYL" secondAttribute="trailing" constant="16" id="bJj-tL-2wm"/>
+                                                <constraint firstItem="XXR-ew-O1L" firstAttribute="top" secondItem="bdY-rS-z3d" secondAttribute="topMargin" id="bgV-Uu-aAM"/>
+                                                <constraint firstItem="XXR-ew-O1L" firstAttribute="bottom" secondItem="bdY-rS-z3d" secondAttribute="bottomMargin" id="dXv-E2-zGT"/>
+                                                <constraint firstItem="mWV-pd-oYL" firstAttribute="top" secondItem="bdY-rS-z3d" secondAttribute="topMargin" id="ySZ-Yh-81T"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="mWV-pd-oYL" id="Mwt-5j-GnC"/>
+                                            <outlet property="dishReviewPreviewLabel" destination="XXR-ew-O1L" id="VIw-0x-aMV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -190,6 +204,12 @@
                         <viewLayoutGuide key="safeArea" id="H9Z-E7-CT5"/>
                     </view>
                     <navigationItem key="navigationItem" id="MJu-c0-cp0"/>
+                    <connections>
+                        <outlet property="dishDetailCuisineLabel" destination="uNb-54-8Xb" id="Hk6-Fo-HQQ"/>
+                        <outlet property="dishDetailImageView" destination="Ilu-wk-dT5" id="6XC-sQ-Yb1"/>
+                        <outlet property="dishDetailNameLabel" destination="PVJ-xj-hSj" id="dcP-Yo-MGy"/>
+                        <outlet property="dishDetailRatingLabel" destination="7Ps-4g-O2r" id="jB4-Aj-ukn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5h6-TA-vBo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
