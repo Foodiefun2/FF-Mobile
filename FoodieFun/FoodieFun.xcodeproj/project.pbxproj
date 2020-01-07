@@ -24,6 +24,7 @@
 		A2E1EE5C23C5275400DEB512 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E1EE5B23C5275400DEB512 /* RestaurantDetailViewController.swift */; };
 		A2E1EE5E23C5292400DEB512 /* RestaurantReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E1EE5D23C5292400DEB512 /* RestaurantReviewTableViewCell.swift */; };
 		A2F9047C23C52B2B00F68E43 /* DishesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9047B23C52B2B00F68E43 /* DishesTableViewController.swift */; };
+		A2F9047E23C5304D00F68E43 /* DishesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9047D23C5304D00F68E43 /* DishesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A2E1EE5B23C5275400DEB512 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		A2E1EE5D23C5292400DEB512 /* RestaurantReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantReviewTableViewCell.swift; sourceTree = "<group>"; };
 		A2F9047B23C52B2B00F68E43 /* DishesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTableViewController.swift; sourceTree = "<group>"; };
+		A2F9047D23C5304D00F68E43 /* DishesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				A2E1EE5823C526C100DEB512 /* HomeRestaurantsTableViewCell.swift */,
 				A2E1EE5D23C5292400DEB512 /* RestaurantReviewTableViewCell.swift */,
+				A2F9047D23C5304D00F68E43 /* DishesTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				A2DC1F3423C3CE9B00A7DE23 /* SignUpLogInViewController.swift in Sources */,
 				A2DC1F2123C3C86200A7DE23 /* ViewController.swift in Sources */,
 				A2DC1F1D23C3C86200A7DE23 /* AppDelegate.swift in Sources */,
+				A2F9047E23C5304D00F68E43 /* DishesTableViewCell.swift in Sources */,
 				A2DC1F1F23C3C86200A7DE23 /* SceneDelegate.swift in Sources */,
 				A2E1EE5E23C5292400DEB512 /* RestaurantReviewTableViewCell.swift in Sources */,
 				A2E1EE5723C5268800DEB512 /* HomeTableViewController.swift in Sources */,

@@ -10,13 +10,13 @@
         <!--Restaurant Dishes-->
         <scene sceneID="DJa-Zm-c5T">
             <objects>
-                <tableViewController id="RX2-gs-cTs" sceneMemberID="viewController">
+                <tableViewController id="RX2-gs-cTs" customClass="DishesTableViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F6f-1B-Mq9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.094117647058823528" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DishDetailCell" rowHeight="100" id="g8K-rf-lEZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DishDetailCell" rowHeight="100" id="g8K-rf-lEZ" customClass="DishesTableViewCell" customModule="FoodieFun" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8K-rf-lEZ" id="v4u-Ry-2d5">
@@ -61,6 +61,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.094117647058823528" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="dishTableImageView" destination="Gbl-us-47P" id="8JX-n2-p82"/>
+                                    <outlet property="dishTableNameLabel" destination="3S8-4u-tMN" id="L2V-hv-Rim"/>
+                                    <outlet property="dishTableReviewPreviewTextView" destination="wNp-vm-JHT" id="7f8-jA-mNa"/>
                                     <segue destination="UWg-tn-dYe" kind="show" id="Vt4-wN-b0W"/>
                                 </connections>
                             </tableViewCell>
@@ -76,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="154.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Dishes Table View Controller-->
         <scene sceneID="F8S-63-SRl">
             <objects>
-                <viewController id="UWg-tn-dYe" sceneMemberID="viewController">
+                <viewController id="UWg-tn-dYe" customClass="DishesTableViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zil-77-IST">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
