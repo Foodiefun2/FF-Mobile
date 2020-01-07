@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="154.6875"/>
         </scene>
-        <!--Dishes Table View Controller-->
+        <!--Dish Detail View Controller-->
         <scene sceneID="F8S-63-SRl">
             <objects>
-                <viewController id="UWg-tn-dYe" customClass="DishesTableViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UWg-tn-dYe" customClass="DishDetailViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zil-77-IST">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,6 +193,12 @@
                         <viewLayoutGuide key="safeArea" id="H9Z-E7-CT5"/>
                     </view>
                     <navigationItem key="navigationItem" id="MJu-c0-cp0"/>
+                    <connections>
+                        <outlet property="dishDetailCuisineLabel" destination="uNb-54-8Xb" id="Hk6-Fo-HQQ"/>
+                        <outlet property="dishDetailImageView" destination="Ilu-wk-dT5" id="6XC-sQ-Yb1"/>
+                        <outlet property="dishDetailNameLabel" destination="PVJ-xj-hSj" id="dcP-Yo-MGy"/>
+                        <outlet property="dishDetailRatingLabel" destination="7Ps-4g-O2r" id="jB4-Aj-ukn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5h6-TA-vBo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
