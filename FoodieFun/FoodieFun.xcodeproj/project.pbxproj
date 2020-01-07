@@ -27,6 +27,7 @@
 		A2F9047E23C5304D00F68E43 /* DishesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9047D23C5304D00F68E43 /* DishesTableViewCell.swift */; };
 		A2F9048023C5314000F68E43 /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9047F23C5314000F68E43 /* DishDetailViewController.swift */; };
 		A2F9048223C5336500F68E43 /* DishDetailReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9048123C5336500F68E43 /* DishDetailReviewTableViewCell.swift */; };
+		A2F9048423C536FE00F68E43 /* AddDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9048323C536FE00F68E43 /* AddDishViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A2F9047D23C5304D00F68E43 /* DishesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTableViewCell.swift; sourceTree = "<group>"; };
 		A2F9047F23C5314000F68E43 /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DishDetailViewController.swift; path = FoodieFun/Storyboards/DishDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		A2F9048123C5336500F68E43 /* DishDetailReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailReviewTableViewCell.swift; sourceTree = "<group>"; };
+		A2F9048323C536FE00F68E43 /* AddDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				A2E1EE5623C5268800DEB512 /* HomeTableViewController.swift */,
 				A2E1EE5B23C5275400DEB512 /* RestaurantDetailViewController.swift */,
 				A2F9047B23C52B2B00F68E43 /* DishesTableViewController.swift */,
+				A2F9048323C536FE00F68E43 /* AddDishViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				A2DC1F1F23C3C86200A7DE23 /* SceneDelegate.swift in Sources */,
 				A2E1EE5E23C5292400DEB512 /* RestaurantReviewTableViewCell.swift in Sources */,
 				A2E1EE5723C5268800DEB512 /* HomeTableViewController.swift in Sources */,
+				A2F9048423C536FE00F68E43 /* AddDishViewController.swift in Sources */,
 				A2E1EE5C23C5275400DEB512 /* RestaurantDetailViewController.swift in Sources */,
 				A2F9048023C5314000F68E43 /* DishDetailViewController.swift in Sources */,
 				A2F9047C23C52B2B00F68E43 /* DishesTableViewController.swift in Sources */,
