@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Restaurant View Controller-->
         <scene sceneID="oQQ-SS-ryO">
             <objects>
-                <viewController id="HCh-ir-W7n" sceneMemberID="viewController">
+                <viewController id="HCh-ir-W7n" customClass="AddRestaurantViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVZ-sD-so2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,6 +208,9 @@
                                 <state key="normal" title="Add Photo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPhotoButtonTapped:" destination="HCh-ir-W7n" eventType="touchUpInside" id="1BE-oT-fHh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmc-Nc-Ate">
                                 <rect key="frame" x="20" y="614" width="63" height="23"/>
@@ -229,9 +232,12 @@
                                 <rect key="frame" x="20" y="781" width="374" height="35"/>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Save Restaurant">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveRestaurantButtonTapped:" destination="HCh-ir-W7n" eventType="touchUpInside" id="EAI-Tu-DpQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -298,6 +304,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rhf-UK-sqF"/>
                     </view>
+                    <connections>
+                        <outlet property="cleanlinessStarRatingView" destination="hBZ-b6-2Fx" id="hm0-QT-sQe"/>
+                        <outlet property="drinksStarRatingView" destination="odw-rj-5Ir" id="9iU-BR-Xmu"/>
+                        <outlet property="foodStarRatingView" destination="tpx-pC-d21" id="AXb-Co-Qt0"/>
+                        <outlet property="fridaySaturdayTextField" destination="RLu-b5-Eze" id="NjT-Pl-IQK"/>
+                        <outlet property="mondayThursdayTextField" destination="cFk-Yn-VzZ" id="n1h-sL-L5b"/>
+                        <outlet property="restaurantAddressTextView" destination="hfs-94-6EE" id="WWE-dP-P77"/>
+                        <outlet property="restaurantNameTextField" destination="lOG-Vl-cxu" id="gr2-Xg-RH7"/>
+                        <outlet property="restaurantPhotoImageView" destination="hbu-oE-RKe" id="J0Y-5m-ORT"/>
+                        <outlet property="restaurantReviewTextView" destination="XJK-tG-mf5" id="1xl-9n-EHa"/>
+                        <outlet property="serviceStarRatingView" destination="25V-za-ElP" id="JDh-br-r8y"/>
+                        <outlet property="sundayTextField" destination="qBJ-2v-PuZ" id="EUW-oC-bf1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GF9-Xj-TDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
