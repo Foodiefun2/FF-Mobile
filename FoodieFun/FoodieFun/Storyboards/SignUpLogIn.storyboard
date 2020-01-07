@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up Log In View Controller-->
         <scene sceneID="ac9-Nn-rmt">
             <objects>
-                <viewController id="ocn-rf-SX7" sceneMemberID="viewController">
+                <viewController id="ocn-rf-SX7" customClass="SignUpLogInViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r7G-YV-Qao">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-Vm-RSr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000045"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="WNS-yv-INy"/>
                                     <constraint firstAttribute="height" constant="896" id="zTi-k6-rsE"/>
@@ -102,6 +102,9 @@
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="ocn-rf-SX7" eventType="touchUpInside" id="xw5-lp-rzv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -138,6 +141,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B1E-lJ-4fc"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="xJS-pQ-uWU" id="MFG-9m-HMe"/>
+                        <outlet property="emailTextField" destination="Rsl-74-Nhv" id="eDb-Og-onM"/>
+                        <outlet property="locationTextField" destination="ejs-ru-YkH" id="OQC-I0-Pv6"/>
+                        <outlet property="passwordTextField" destination="9y2-bd-img" id="rFK-5M-qzs"/>
+                        <outlet property="signUpLogInSegmentedControl" destination="FhP-zv-beh" id="I8F-ZB-p5W"/>
+                        <outlet property="usernameTextField" destination="dad-5J-lLG" id="K2h-lD-voZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8Y-Ca-I0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

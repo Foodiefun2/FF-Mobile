@@ -9,12 +9,25 @@
 import UIKit
 
 @IBDesignable class SignUpLogInViewController: UIViewController {
+    
+    @IBOutlet weak var signUpLogInSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     
 
     /*
