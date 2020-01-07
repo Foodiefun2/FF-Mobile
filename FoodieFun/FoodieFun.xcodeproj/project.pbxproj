@@ -18,6 +18,7 @@
 		A2DC1F3723C3DA2C00A7DE23 /* AddNewDish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F3623C3DA2C00A7DE23 /* AddNewDish.storyboard */; };
 		A2DC1F3923C3E82500A7DE23 /* AddNewRestaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F3823C3E82500A7DE23 /* AddNewRestaurant.storyboard */; };
 		A2E1EE5323C4FA7800DEB512 /* HomeFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E1EE5223C4FA7800DEB512 /* HomeFeed.storyboard */; };
+		A2E1EE5523C5061300DEB512 /* DishDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E1EE5423C5061300DEB512 /* DishDetailView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A2DC1F3623C3DA2C00A7DE23 /* AddNewDish.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewDish.storyboard; sourceTree = "<group>"; };
 		A2DC1F3823C3E82500A7DE23 /* AddNewRestaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewRestaurant.storyboard; sourceTree = "<group>"; };
 		A2E1EE5223C4FA7800DEB512 /* HomeFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeFeed.storyboard; sourceTree = "<group>"; };
+		A2E1EE5423C5061300DEB512 /* DishDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DishDetailView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				A2DC1F3623C3DA2C00A7DE23 /* AddNewDish.storyboard */,
 				A2DC1F3823C3E82500A7DE23 /* AddNewRestaurant.storyboard */,
 				A2E1EE5223C4FA7800DEB512 /* HomeFeed.storyboard */,
+				A2E1EE5423C5061300DEB512 /* DishDetailView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				A2DC1F2623C3C86300A7DE23 /* Assets.xcassets in Resources */,
 				A2DC1F2423C3C86200A7DE23 /* Main.storyboard in Resources */,
 				A2E1EE5323C4FA7800DEB512 /* HomeFeed.storyboard in Resources */,
+				A2E1EE5523C5061300DEB512 /* DishDetailView.storyboard in Resources */,
 				A2DC1F3723C3DA2C00A7DE23 /* AddNewDish.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
