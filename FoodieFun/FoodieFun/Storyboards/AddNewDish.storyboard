@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Dish View Controller-->
+        <scene sceneID="qZM-gk-O4M">
+            <objects>
+                <viewController id="jCI-Sn-ywJ" customClass="AddDishViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kC6-hn-NXr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background3Blurred" translatesAutoresizingMaskIntoConstraints="NO" id="4Ww-VW-2H0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="Ieo-X5-YIh"/>
+                                    <constraint firstAttribute="height" constant="896" id="if7-cj-THZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Dish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMv-1h-plL">
+                                <rect key="frame" x="20" y="44" width="298" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dish Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4e-HO-d9U">
+                                <rect key="frame" x="60" y="114.5" width="334" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.8455961044520548" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Dhb-5Q-15I"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-XM-dAx">
+                                <rect key="frame" x="20" y="174.5" width="374" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoO-hP-nV7">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.8455961045" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0zc-cd-Eu4"/>
+                                            <constraint firstAttribute="width" constant="180" id="5L6-XR-Pnj"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuisine" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZTd-H5-TSs">
+                                        <rect key="frame" x="194" y="0.0" width="180" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.8455961045" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="gSb-N6-9wn"/>
+                                            <constraint firstAttribute="height" constant="40" id="znB-SY-Jtq"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vKc-v8-vhP">
+                                <rect key="frame" x="20" y="295" width="200" height="198"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GWK-sy-3qs"/>
+                                    <constraint firstAttribute="width" secondItem="vKc-v8-vhP" secondAttribute="height" multiplier="1:1" id="zQW-5l-cTE"/>
+                                    <constraint firstAttribute="width" constant="200" id="zdu-nz-M9H"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vic-Ke-38d">
+                                <rect key="frame" x="225" y="294.5" width="169" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taste" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnY-9f-K1m">
+                                        <rect key="frame" x="129" y="0.0" width="40" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjb-OA-LzX">
+                                        <rect key="frame" x="0.0" y="28.5" width="169" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="zYI-dQ-XZP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CQV-si-f09">
+                                <rect key="frame" x="225" y="361" width="169" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttd-G9-uvc">
+                                        <rect key="frame" x="77.5" y="0.0" width="91.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCU-6X-IQ2">
+                                        <rect key="frame" x="0.0" y="28.5" width="169" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QdX-po-Zah"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vvx-9i-sXR">
+                                <rect key="frame" x="225" y="427.5" width="169" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOa-Fk-Z0h">
+                                        <rect key="frame" x="131.5" y="0.0" width="37.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-dl-Kmm">
+                                        <rect key="frame" x="0.0" y="28.5" width="169" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="yK9-jo-eDH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUz-CK-9Rn">
+                                <rect key="frame" x="20" y="499.5" width="200" height="33"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="04j-Up-K4k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add Photo of Dish">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDishPhotoButtonTapped:" destination="jCI-Sn-ywJ" eventType="touchUpInside" id="EAO-kq-Hwd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lb4-oS-JJh">
+                                <rect key="frame" x="20" y="557.5" width="58.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zql-8a-ZPR">
+                                <rect key="frame" x="20" y="588.5" width="374" height="160"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Rbq-43-TPY"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHa-V1-bFF">
+                                <rect key="frame" x="30" y="773.5" width="354" height="40"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="orY-HE-OTo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Save Dish">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDishButtonTapped:" destination="jCI-Sn-ywJ" eventType="touchUpInside" id="uAr-89-UlG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W07-jG-VUO" firstAttribute="trailing" secondItem="e4e-HO-d9U" secondAttribute="trailing" constant="20" id="23j-zO-OUS"/>
+                            <constraint firstItem="Lb4-oS-JJh" firstAttribute="leading" secondItem="W07-jG-VUO" secondAttribute="leading" constant="20" id="45I-qS-HyB"/>
+                            <constraint firstItem="e4e-HO-d9U" firstAttribute="leading" secondItem="W07-jG-VUO" secondAttribute="leading" constant="60" id="7n0-zZ-avz"/>
+                            <constraint firstItem="W07-jG-VUO" firstAttribute="trailing" secondItem="Vvx-9i-sXR" secondAttribute="trailing" constant="20" id="8an-bE-ugz"/>
+                            <constraint firstItem="W07-jG-VUO" firstAttribute="trailing" secondItem="Zql-8a-ZPR" secondAttribute="trailing" constant="20" id="9G7-1I-NnQ"/>
+                            <constraint firstItem="vKc-v8-vhP" firstAttribute="top" secondItem="IKg-XM-dAx" secondAttribute="bottom" constant="80" id="DN3-Ui-Qx8"/>
+                            <constraint firstItem="IKg-XM-dAx" firstAttribute="leading" secondItem="W07-jG-VUO" secondAttribute="leading" constant="20" id="Ev4-g1-RsV"/>
+                            <constraint firstItem="4Ww-VW-2H0" firstAttribute="centerX" secondItem="kC6-hn-NXr" secondAttribute="centerX" id="HKP-9V-K7b"/>
+                            <constraint firstItem="W07-jG-VUO" firstAttribute="trailing" secondItem="vic-Ke-38d" secondAttribute="trailing" constant="20" id="HTJ-wu-SEg"/>
+                            <constraint firstItem="Lb4-oS-JJh" firstAttribute="top" secondItem="EUz-CK-9Rn" secondAttribute="bottom" constant="25" id="Kgn-Sp-8zg"/>
+                            <constraint firstItem="vKc-v8-vhP" firstAttribute="leading" secondItem="W07-jG-VUO" secondAttribute="leading" constant="20" id="KlI-Wp-6Lv"/>
+                            <constraint firstItem="IKg-XM-dAx" firstAttribute="top" secondItem="e4e-HO-d9U" secondAttribute="bottom" constant="20" id="Onh-Sj-Svb"/>
+                            <constraint firstItem="EUz-CK-9Rn" firstAttribute="top" secondItem="vKc-v8-vhP" secondAttribute="bottom" constant="5" id="PZP-eo-KWj"/>
+                            <constraint firstItem="W07-jG-VUO" firstAttribute="trailing" secondItem="EHa-V1-bFF" secondAttribute="trailing" constant="30" id="XyW-wj-djV"/>
+                            <constraint firstItem="4Ww-VW-2H0" firstAttribute="centerY" secondItem="kC6-hn-NXr" secondAttribute="centerY" id="cZ8-9z-ehU"/>
+                            <constraint firstItem="EUz-CK-9Rn" firstAttribute="leading" secondItem="W07-jG-VUO" secondAttribute="leading" constant="20" id="dtg-rT-xV1"/>
+                            <constraint firstItem="e4e-HO-d9U" firstAttribute="top" secondItem="aMv-1h-plL" secondAttribute="bottom" constant="8" id="e9G-B3-ZEl"/>
+                            <constraint firstItem="W07-jG-VUO" firstAttribute="trailing" secondItem="IKg-XM-dAx" secondAttribute="trailing" constant="20" id="emk-H8-ne9"/>
+                            <constraint firstItem="EHa-V1-bFF" firstAttribute="leading" secondItem="W07-jG-VUO" secondAttribute="leading" constant="30" id="fRp-V0-fLv"/>
+                            <constraint firstItem="vic-Ke-38d" firstAttribute="top" secondItem="IKg-XM-dAx" secondAttribute="bottom" constant="80" id="fwm-FU-UJA"/>
+                            <constraint firstItem="aMv-1h-plL" firstAttribute="top" secondItem="W07-jG-VUO" secondAttribute="top" id="gls-gG-h9Q"/>
+                            <constraint firstItem="Zql-8a-ZPR" firstAttribute="top" secondItem="Lb4-oS-JJh" secondAttribute="bottom" constant="8" id="grw-Fm-hHd"/>
+                            <constraint firstItem="aMv-1h-plL" firstAttribute="leading" secondItem="W07-jG-VUO" secondAttribute="leading" constant="20" id="imL-Ej-SJl"/>
+                            <constraint firstItem="EHa-V1-bFF" firstAttribute="top" secondItem="Zql-8a-ZPR" secondAttribute="bottom" constant="25" id="lRg-vJ-RdC"/>
+                            <constraint firstItem="Vvx-9i-sXR" firstAttribute="top" secondItem="CQV-si-f09" secondAttribute="bottom" constant="8" id="nln-pi-s26"/>
+                            <constraint firstItem="CQV-si-f09" firstAttribute="top" secondItem="vic-Ke-38d" secondAttribute="bottom" constant="8" id="srb-Um-nfg"/>
+                            <constraint firstItem="W07-jG-VUO" firstAttribute="trailing" secondItem="CQV-si-f09" secondAttribute="trailing" constant="20" id="y5e-j0-sDT"/>
+                            <constraint firstItem="Zql-8a-ZPR" firstAttribute="leading" secondItem="W07-jG-VUO" secondAttribute="leading" constant="20" id="yuH-XF-kD1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W07-jG-VUO"/>
+                    </view>
+                    <connections>
+                        <outlet property="addDishPhotoImageView" destination="vKc-v8-vhP" id="Cr5-fo-sNb"/>
+                        <outlet property="appearanceStarRatingView" destination="HCU-6X-IQ2" id="NbJ-IS-P9W"/>
+                        <outlet property="dishCuisineTextField" destination="ZTd-H5-TSs" id="SgN-YC-fUx"/>
+                        <outlet property="dishNameTextField" destination="e4e-HO-d9U" id="dAz-8x-F85"/>
+                        <outlet property="dishReviewTextView" destination="Zql-8a-ZPR" id="xmm-V2-z1U"/>
+                        <outlet property="priceStarRatingView" destination="zHg-dl-Kmm" id="c9i-4f-xxL"/>
+                        <outlet property="restaurantTextField" destination="qoO-hP-nV7" id="Kwk-TV-1nv"/>
+                        <outlet property="tasteStarRatingView" destination="zjb-OA-LzX" id="Vdg-cw-1nb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPR-8w-Nmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155.07246376811597" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background3Blurred" width="1239" height="1652"/>
+        <image name="camera" catalog="system" width="64" height="48"/>
+    </resources>
+</document>
