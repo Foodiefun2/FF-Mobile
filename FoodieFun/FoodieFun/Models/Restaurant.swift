@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Restaurant {
+struct Restaurant: Codable {
     var id: Int?
-    var name, location, hours, review: String
-    var cuisine: Cuisine
-    var image: String
+    var name, location, hours, image: String
+    var cuisine: String
+    var reviews: [Review]
 }

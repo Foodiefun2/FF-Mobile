@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Rating {
+struct Rating: Codable {
     var id, restaurantID: Int
     var foodRating, drinksRating, decorRating, serviceRating, cleanlinessRating: String
 }

@@ -7,10 +7,10 @@
 //
 
 import Foundation
-struct Review {
+struct Review: Codable {
     var id: Int
     var menuItem: String
-    var cuisine: Cuisine
+    var cuisine: String
     var price: Int
     var rating: Int
     var review: String
