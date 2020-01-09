@@ -96,14 +96,12 @@
 			children = (
 				A2DC1F1C23C3C86200A7DE23 /* AppDelegate.swift */,
 				A2DC1F1E23C3C86200A7DE23 /* SceneDelegate.swift */,
+				A2DE881623C7C835002BB4F6 /* Models */,
 				A2E1EE5A23C526C900DEB512 /* Views */,
 				A2DC1F3523C3CEA900A7DE23 /* View Controllers */,
 				A2DC1F3223C3C95A00A7DE23 /* Storyboards */,
 				A2DC1F2523C3C86300A7DE23 /* Assets.xcassets */,
 				A2DC1F2A23C3C86300A7DE23 /* Info.plist */,
-				A2604C7E23C5590A00C8FAAC /* User.swift */,
-				A2604C8023C5598000C8FAAC /* Restaurant.swift */,
-				A2604C8223C559CB00C8FAAC /* CuisineEnum.swift */,
 			);
 			path = FoodieFun;
 			sourceTree = "<group>";
@@ -135,6 +133,16 @@
 				A2F9048523C5392000F68E43 /* AddRestaurantViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A2DE881623C7C835002BB4F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2604C7E23C5590A00C8FAAC /* User.swift */,
+				A2604C8023C5598000C8FAAC /* Restaurant.swift */,
+				A2604C8223C559CB00C8FAAC /* CuisineEnum.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A2E1EE5A23C526C900DEB512 /* Views */ = {
