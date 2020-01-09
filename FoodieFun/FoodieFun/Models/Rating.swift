@@ -9,7 +9,6 @@
 import Foundation
 
 struct Rating {
-    var id: Int
+    var id, restaurantID: Int
     var foodRating, drinksRating, decorRating, serviceRating, cleanlinessRating: String
-    var restaurantID: Int
 }
