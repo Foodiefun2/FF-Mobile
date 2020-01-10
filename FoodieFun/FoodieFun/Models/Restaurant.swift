@@ -9,8 +9,13 @@
 import Foundation
 
 struct Restaurant: Codable {
-    var id: Int?
+    var id, userID: Int?
     var name, location, hours, image: String
     var cuisine: String
     var reviews: [Review]
+    
+    enum RestaurantCodingKeys: String, CodingKey {
+        case image = "img"
+        case userID = "foodie_id"
+    }
 }
