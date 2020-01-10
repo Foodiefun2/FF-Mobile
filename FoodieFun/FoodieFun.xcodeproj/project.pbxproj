@@ -22,6 +22,8 @@
 		A2DC1F3923C3E82500A7DE23 /* AddNewRestaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DC1F3823C3E82500A7DE23 /* AddNewRestaurant.storyboard */; };
 		A2DE881823C7C99C002BB4F6 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE881723C7C99C002BB4F6 /* Review.swift */; };
 		A2DE881A23C7D04F002BB4F6 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE881923C7D04F002BB4F6 /* Rating.swift */; };
+		A2DE881C23C7F40F002BB4F6 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE881B23C7F40F002BB4F6 /* NetworkController.swift */; };
+		A2DE881F23C7F9B8002BB4F6 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE881E23C7F9B8002BB4F6 /* Bearer.swift */; };
 		A2E1EE5323C4FA7800DEB512 /* HomeFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E1EE5223C4FA7800DEB512 /* HomeFeed.storyboard */; };
 		A2E1EE5523C5061300DEB512 /* DishDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E1EE5423C5061300DEB512 /* DishDetailView.storyboard */; };
 		A2E1EE5723C5268800DEB512 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E1EE5623C5268800DEB512 /* HomeTableViewController.swift */; };
@@ -54,6 +56,8 @@
 		A2DC1F3823C3E82500A7DE23 /* AddNewRestaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewRestaurant.storyboard; sourceTree = "<group>"; };
 		A2DE881723C7C99C002BB4F6 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		A2DE881923C7D04F002BB4F6 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		A2DE881B23C7F40F002BB4F6 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		A2DE881E23C7F9B8002BB4F6 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		A2E1EE5223C4FA7800DEB512 /* HomeFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeFeed.storyboard; sourceTree = "<group>"; };
 		A2E1EE5423C5061300DEB512 /* DishDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DishDetailView.storyboard; sourceTree = "<group>"; };
 		A2E1EE5623C5268800DEB512 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				A2DC1F1C23C3C86200A7DE23 /* AppDelegate.swift */,
 				A2DC1F1E23C3C86200A7DE23 /* SceneDelegate.swift */,
 				A2DE881623C7C835002BB4F6 /* Models */,
+				A2DE881D23C7F417002BB4F6 /* Model Controllers */,
 				A2E1EE5A23C526C900DEB512 /* Views */,
 				A2DC1F3523C3CEA900A7DE23 /* View Controllers */,
 				A2DC1F3223C3C95A00A7DE23 /* Storyboards */,
@@ -147,8 +152,17 @@
 				A2604C8223C559CB00C8FAAC /* CuisineEnum.swift */,
 				A2DE881723C7C99C002BB4F6 /* Review.swift */,
 				A2DE881923C7D04F002BB4F6 /* Rating.swift */,
+				A2DE881E23C7F9B8002BB4F6 /* Bearer.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A2DE881D23C7F417002BB4F6 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2DE881B23C7F40F002BB4F6 /* NetworkController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		A2E1EE5A23C526C900DEB512 /* Views */ = {
@@ -238,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DE881C23C7F40F002BB4F6 /* NetworkController.swift in Sources */,
 				A2604C8323C559CB00C8FAAC /* CuisineEnum.swift in Sources */,
 				A2DC1F3423C3CE9B00A7DE23 /* SignUpLogInViewController.swift in Sources */,
 				A2DC1F2123C3C86200A7DE23 /* ViewController.swift in Sources */,
@@ -254,6 +269,7 @@
 				A2F9048423C536FE00F68E43 /* AddDishViewController.swift in Sources */,
 				A2E1EE5C23C5275400DEB512 /* RestaurantDetailViewController.swift in Sources */,
 				A2F9048023C5314000F68E43 /* DishDetailViewController.swift in Sources */,
+				A2DE881F23C7F9B8002BB4F6 /* Bearer.swift in Sources */,
 				A2F9047C23C52B2B00F68E43 /* DishesTableViewController.swift in Sources */,
 				A2F9048223C5336500F68E43 /* DishDetailReviewTableViewCell.swift in Sources */,
 				A2E1EE5923C526C100DEB512 /* HomeRestaurantsTableViewCell.swift in Sources */,
