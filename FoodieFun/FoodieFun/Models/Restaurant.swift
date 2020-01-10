@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Restaurant.swift
 //  FoodieFun
 //
 //  Created by Alex Shillingford on 1/7/20.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct User {
+struct Restaurant: Codable {
     var id: Int?
-    var username, password, email, location: String
+    var name, location, hours, image: String
+    var cuisine: String
+    var reviews: [Review]
 }
