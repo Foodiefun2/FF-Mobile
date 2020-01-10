@@ -27,6 +27,7 @@ class NetworkController {
     private let baseURL = URL(string: "https://rayfoodiefun.herokuapp.com/api")!
     var bearer: Bearer?
     
+    // MARK: - AUTH/Sign Up
     func signUpNewUser(user: User, completion: @escaping (NetworkError?) -> Void) {
         let signUpURL = baseURL
             .appendingPathComponent("auth")
@@ -60,6 +61,7 @@ class NetworkController {
         }.resume()
     }
     
+    // MARK: - AUTH/Log in
     func logIn(with user: User, completion: @escaping (NetworkError?) -> Void) {
         let signInURL = baseURL
             .appendingPathComponent("auth")
