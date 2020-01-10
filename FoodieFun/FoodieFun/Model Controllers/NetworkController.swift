@@ -26,6 +26,7 @@ enum NetworkError: Error {
 class NetworkController {
     private let baseURL = URL(string: "https://rayfoodiefun.herokuapp.com/api")!
     var bearer: Bearer?
+    var restaurants: [Restaurant] = []
     static let shared = NetworkController()
     
     // MARK: - AUTH/Sign Up
@@ -111,5 +112,41 @@ class NetworkController {
         }.resume()
     }
     
-    
+    func fetchAllRestaurants(completion: @escaping (Result<[Restaurant], NetworkError>) -> Void) {
+        guard let bearer = bearer else {
+            completion(.failure(.noAuth))
+            return
+        }
+        
+        let fetchAllRestaurantsURL = baseURL.appendingPathComponent("restaurants")
+        var request = URLRequest(url: fetchAllRestaurantsURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse,
+            response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+            
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
+            
+            do {
+                self.restaurants = try JSONDecoder().decode([Restaurant].self, from: data)
+                completion(.success(self.restaurants))
+            } catch {
+                completion(.failure(.noDecode))
+                return
+            }
+        }.resume()
+    }
 }
