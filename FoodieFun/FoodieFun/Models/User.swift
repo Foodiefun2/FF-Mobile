@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
     var id: Int?
     var username, password, email, location: String
+    var restaurants: [Restaurant]
 }
