@@ -26,6 +26,7 @@ enum NetworkError: Error {
 class NetworkController {
     private let baseURL = URL(string: "https://rayfoodiefun.herokuapp.com/api")!
     var bearer: Bearer?
+    static let shared = NetworkController()
     
     // MARK: - AUTH/Sign Up
     func signUpNewUser(user: User, completion: @escaping (NetworkError?) -> Void) {

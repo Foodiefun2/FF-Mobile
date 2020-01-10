@@ -10,7 +10,7 @@
         <!--Restaurants-->
         <scene sceneID="GZg-1y-DK6">
             <objects>
-                <tableViewController id="q0O-EN-5F9" sceneMemberID="viewController">
+                <tableViewController id="q0O-EN-5F9" customClass="HomeTableViewController" customModule="FoodieFun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NVw-cc-IbI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
                     <navigationItem key="navigationItem" title="Restaurants" id="Zwc-F3-xUL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="jrN-ke-d3d" kind="presentation" id="zjj-XC-SVE"/>
+                        <segue destination="jrN-ke-d3d" kind="presentation" identifier="AuthSegue" id="zjj-XC-SVE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yw-AQ-Rxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
