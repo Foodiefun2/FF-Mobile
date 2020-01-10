@@ -25,9 +25,42 @@ import UIKit
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Incomplete registration!", message: "Please fill out all the text fields before continuing", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(alertAction)
         
+        guard let email = emailTextField.text,
+            !email.isEmpty,
+            let username = usernameTextField.text,
+            !username.isEmpty,
+            let password = passwordTextField.text,
+            !password.isEmpty,
+            let confirmedPassword = confirmPasswordTextField.text,
+            !confirmedPassword.isEmpty,
+            let location = locationTextField.text,
+            !location.isEmpty else {
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
+                return
+        }
     }
     
+    @IBAction func signInTypeChanged(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            emailTextField.isHidden = false
+            usernameTextField.isHidden = false
+            passwordTextField.isHidden = false
+            confirmPasswordTextField.isHidden = false
+            locationTextField.isHidden = false
+        } else {
+            emailTextField.isHidden = true
+            usernameTextField.isHidden = false
+            passwordTextField.isHidden = false
+            confirmPasswordTextField.isHidden = true
+            locationTextField.isHidden = true
+        }
+    }
     
 
     /*

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="iZI-Vm-RSr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000045"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="WNS-yv-INy"/>
                                     <constraint firstAttribute="height" constant="896" id="zTi-k6-rsE"/>
@@ -46,6 +46,9 @@
                                     <segment title="Log in"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="signInTypeChanged:" destination="ocn-rf-SX7" eventType="valueChanged" id="JB4-5p-EQx"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rsl-74-Nhv">
                                 <rect key="frame" x="20" y="319" width="374" height="40"/>
