@@ -149,6 +149,7 @@
                         <outlet property="emailTextField" destination="Rsl-74-Nhv" id="eDb-Og-onM"/>
                         <outlet property="locationTextField" destination="ejs-ru-YkH" id="OQC-I0-Pv6"/>
                         <outlet property="passwordTextField" destination="9y2-bd-img" id="rFK-5M-qzs"/>
+                        <outlet property="signUpButton" destination="4Qn-NX-T9e" id="R8q-Pp-bID"/>
                         <outlet property="signUpLogInSegmentedControl" destination="FhP-zv-beh" id="I8F-ZB-p5W"/>
                         <outlet property="usernameTextField" destination="dad-5J-lLG" id="K2h-lD-voZ"/>
                     </connections>
