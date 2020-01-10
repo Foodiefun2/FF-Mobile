@@ -26,11 +26,11 @@ import UIKit
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
-        // TODO: - Throw the following lines 29-47 inside an if/else statement based on the segmented control
+        let alert = UIAlertController(title: "Incomplete registration!", message: "Please fill out all the text fields before continuing", preferredStyle: .alert)
+                   let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                   alert.addAction(alertAction)
+        
         if signUpLogInSegmentedControl.selectedSegmentIndex == 0 {
-            let alert = UIAlertController(title: "Incomplete registration!", message: "Please fill out all the text fields before continuing", preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alert.addAction(alertAction)
             
             guard let email = emailTextField.text,
                 !email.isEmpty,
@@ -58,9 +58,28 @@ import UIKit
                         let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                         alertController.addAction(alertAction)
                         self.present(alertController, animated: true, completion:  {
-                            self.signUpLogInSegmentedControl.selectedSegmentIndex = 1
-                            self.signUpButton.setTitle("Sign In", for: .normal)
+                            
                         })
+                    }
+                }
+            }
+        } else {
+            guard let username = usernameTextField.text,
+                !username.isEmpty,
+                let password = passwordTextField.text,
+                !password.isEmpty else {
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    return
+            }
+//            guard let user = NetworkController.shared.user else { return }
+            NetworkController.shared.logIn(with: username, password: password) { (error) in
+                if let error = error {
+                    NSLog("Error occured during log in: \(error)")
+                } else {
+                    DispatchQueue.main.async {
+                        self.dismiss(animated: true, completion: nil)
                     }
                 }
             }
@@ -74,12 +93,14 @@ import UIKit
             passwordTextField.isHidden = false
             confirmPasswordTextField.isHidden = false
             locationTextField.isHidden = false
+            self.signUpButton.setTitle("Sign Up", for: .normal)
         } else {
             emailTextField.isHidden = true
             usernameTextField.isHidden = false
             passwordTextField.isHidden = false
             confirmPasswordTextField.isHidden = true
             locationTextField.isHidden = true
+            self.signUpButton.setTitle("Sign In", for: .normal)
         }
     }
     
