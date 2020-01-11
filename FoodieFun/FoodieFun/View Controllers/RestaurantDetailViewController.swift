@@ -19,11 +19,22 @@ class RestaurantDetailViewController: UIViewController {
     @IBOutlet weak var fridaySaturdayHoursLabel: UILabel!
     @IBOutlet weak var sundayHoursLabel: UILabel!
     
+    var restaurant: Restaurant?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func updateViews() {
+        guard let restaurant = restaurant else { return }
+        
+        restaurantDetailNameLabel.text = restaurant.name
+        restaurantDetailCuisineLabel.text = restaurant.cuisine
+        restaurantDetailAddressTextView.text = restaurant.location
+        
+        
     }
     
 

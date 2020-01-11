@@ -8,7 +8,7 @@
 
 import Foundation
 struct Review: Codable {
-    var id: Int
+    var id: Int?
     var menuItem: String
     var cuisine: String
     var price: String
