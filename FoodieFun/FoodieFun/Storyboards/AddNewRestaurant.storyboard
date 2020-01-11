@@ -155,7 +155,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hbu-oE-RKe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hbu-oE-RKe">
                                 <rect key="frame" x="20" y="364" width="200" height="197.66666666666669"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -313,6 +313,7 @@
                     </view>
                     <connections>
                         <outlet property="cleanlinessRatingTextField" destination="E8t-UP-46Q" id="9Vf-G6-nn5"/>
+                        <outlet property="cuisineTextField" destination="LLH-ud-KHO" id="kr3-pn-EbO"/>
                         <outlet property="decorRatingTextField" destination="syv-kS-MPB" id="0Mr-3E-1xp"/>
                         <outlet property="drinksRatingTextField" destination="rR7-GV-3RB" id="swu-VN-mLL"/>
                         <outlet property="foodRatingTextField" destination="oFt-Lb-viD" id="j2W-hz-OaJ"/>
