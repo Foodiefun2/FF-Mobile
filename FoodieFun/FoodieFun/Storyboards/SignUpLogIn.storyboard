@@ -46,6 +46,9 @@
                                     <segment title="Log in"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.76862745099999996" green="0.32156862749999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="signInTypeChanged:" destination="ocn-rf-SX7" eventType="valueChanged" id="JB4-5p-EQx"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rsl-74-Nhv">
                                 <rect key="frame" x="20" y="319" width="374" height="40"/>
@@ -146,6 +149,7 @@
                         <outlet property="emailTextField" destination="Rsl-74-Nhv" id="eDb-Og-onM"/>
                         <outlet property="locationTextField" destination="ejs-ru-YkH" id="OQC-I0-Pv6"/>
                         <outlet property="passwordTextField" destination="9y2-bd-img" id="rFK-5M-qzs"/>
+                        <outlet property="signUpButton" destination="4Qn-NX-T9e" id="R8q-Pp-bID"/>
                         <outlet property="signUpLogInSegmentedControl" destination="FhP-zv-beh" id="I8F-ZB-p5W"/>
                         <outlet property="usernameTextField" destination="dad-5J-lLG" id="K2h-lD-voZ"/>
                     </connections>

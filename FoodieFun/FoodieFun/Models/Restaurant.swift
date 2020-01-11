@@ -10,7 +10,8 @@ import Foundation
 
 struct Restaurant: Codable {
     var id, userID: Int?
-    var name, location, hours, image: String
+    var name, location, hours: String
+    var image: String?
     var cuisine: String
     var reviews: [Review]
     
