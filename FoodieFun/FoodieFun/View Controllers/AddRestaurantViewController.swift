@@ -12,14 +12,14 @@ class AddRestaurantViewController: UIViewController {
     
     @IBOutlet weak var restaurantNameTextField: UITextField!
     @IBOutlet weak var restaurantAddressTextView: UITextView!
-    @IBOutlet weak var mondayThursdayTextField: UITextField!
-    @IBOutlet weak var fridaySaturdayTextField: UITextField!
-    @IBOutlet weak var sundayTextField: UITextField!
+    @IBOutlet weak var restaurantHourOpensTextField: UITextField!
+    @IBOutlet weak var restaurantHourClosesTextField: UITextField!
+    @IBOutlet weak var foodRatingTextField: UITextField!
+    @IBOutlet weak var drinksRatingTextField: UITextField!
+    @IBOutlet weak var serviceRatingTextField: UITextField!
+    @IBOutlet weak var cleanlinessRatingTextField: UITextField!
+    @IBOutlet weak var decorRatingTextField: UITextField!
     @IBOutlet weak var restaurantPhotoImageView: UIImageView!
-    @IBOutlet weak var foodStarRatingView: UIView!
-    @IBOutlet weak var drinksStarRatingView: UIView!
-    @IBOutlet weak var serviceStarRatingView: UIView!
-    @IBOutlet weak var cleanlinessStarRatingView: UIView!
     @IBOutlet weak var restaurantReviewTextView: UITextView!
     
 

@@ -174,4 +174,27 @@ class NetworkController {
             }
         }.resume()
     }
+    
+    func postNewRestaurant(restaurant: Restaurant, completion: @escaping (NetworkError?) -> Void = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("restaurants")
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        
+        do {
+            request.httpBody = try JSONEncoder().encode(restaurant)
+        } catch {
+            NSLog("Error POSTing restaurant on line \(#file) in \(#line): \(error)")
+            completion(.otherError)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
+            if let error = error {
+                NSLog("Error POSTing restaurant in dataTask on line \(#line): \(error)")
+                completion(.otherError)
+            }
+            
+            completion(nil)
+        }.resume()
+    }
 }
