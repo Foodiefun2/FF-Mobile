@@ -73,6 +73,11 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Restaurants" image="house" catalog="system" selectedImage="house.fill" id="A5L-OF-hi2"/>
                     <navigationItem key="navigationItem" title="Restaurants" id="Zwc-F3-xUL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="lUw-51-pqi">
+                            <connections>
+                                <action selector="refreshTables:" destination="q0O-EN-5F9" id="azg-RC-Pxy"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hi1-Vv-gW5">
                             <connections>
                                 <segue destination="Uh5-U6-ijf" kind="presentation" identifier="AddRestaurantCell" id="v7H-WZ-f2u"/>

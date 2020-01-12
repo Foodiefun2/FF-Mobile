@@ -146,7 +146,7 @@ class NetworkController {
         let fetchAllRestaurantsURL = baseURL.appendingPathComponent("restaurants")
         var request = URLRequest(url: fetchAllRestaurantsURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
@@ -168,18 +168,26 @@ class NetworkController {
             do {
                 self.restaurants = try JSONDecoder().decode([Restaurant].self, from: data)
                 completion(.success(self.restaurants))
+                NSLog("Success fetching Restaurants!")
             } catch {
                 completion(.failure(.noDecode))
+                NSLog("Error Fetching restaurants: \(error)")
                 return
             }
         }.resume()
     }
     
     func postNewRestaurant(restaurant: Restaurant, completion: @escaping (NetworkError?) -> Void = { _ in }) {
+        guard let bearer = bearer else {
+            completion(.noAuth)
+            return
+        }
+        
         let requestURL = baseURL.appendingPathComponent("restaurants")
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
-        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         do {
             request.httpBody = try JSONEncoder().encode(restaurant)
         } catch {
@@ -188,10 +196,14 @@ class NetworkController {
             return
         }
         
-        URLSession.shared.dataTask(with: request) { (_, _, error) in
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
             if let error = error {
                 NSLog("Error POSTing restaurant in dataTask on line \(#line): \(error)")
                 completion(.otherError)
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                NSLog("response is \(response.statusCode)")
             }
             
             completion(nil)

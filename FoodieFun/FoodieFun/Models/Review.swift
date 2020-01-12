@@ -12,14 +12,16 @@ struct Review: Codable {
     var menuItem: String
     var cuisine: String
     var price: String
-    var rating: Int
+    var rating: String
     var review: String
     var image: String?
     var userID: Int
     var restaurantID: Int
     
-    enum ReviewCodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
+        case id
         case menuItem = "menu_item"
+        case cuisine, price, rating, review
         case image = "img"
         case userID = "foodie_id"
         case restaurantID = "restaurant_id"
