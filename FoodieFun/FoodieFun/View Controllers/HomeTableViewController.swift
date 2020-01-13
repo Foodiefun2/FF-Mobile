@@ -10,24 +10,41 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var restaurants: [Restaurant] = []
+    var restaurants: [Restaurant] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+//                self.tableView.reloadInputViews()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         
+        NetworkController.shared.fetchAllRestaurants { (_) in
+            self.restaurants = NetworkController.shared.restaurants
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if NetworkController.shared.bearer == nil {
             performSegue(withIdentifier: "AuthSegue", sender: self)
-        } else {
-            NetworkController.shared.fetchAllRestaurants { (_) in
-                self.restaurants = NetworkController.shared.restaurants
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+        }
+        
+        NetworkController.shared.fetchAllRestaurants { (_) in
+            self.restaurants = NetworkController.shared.restaurants
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
     }
@@ -41,18 +58,18 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return NetworkController.shared.restaurants.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeRestaurantCell", for: indexPath) as? HomeRestaurantsTableViewCell else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeRestaurantCell", for: indexPath)
         
-        var restaurant = restaurants[indexPath.row]
+        let restaurant = restaurants[indexPath.row]
         
         // Configure the cell...
-        cell.restaurantNameLabel.text = restaurant.name
-        cell.restaurantDetailLabel.text = restaurant.location
+        cell.textLabel?.text = restaurant.name
+        cell.detailTextLabel?.text = restaurant.location
         
         return cell
     }
@@ -104,12 +121,21 @@ class HomeTableViewController: UITableViewController {
     }
     
     @IBAction func refreshTables(_ sender: UIBarButtonItem) {
-        NetworkController.shared.fetchAllRestaurants { (_) in
-            self.restaurants = NetworkController.shared.restaurants
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        let group = DispatchGroup()
+        
+        group.enter()
+        DispatchQueue.global().sync {
+            NetworkController.shared.fetchAllRestaurants { (_) in
+                self.restaurants = NetworkController.shared.restaurants
+                group.leave()
             }
+        }
+        
+        group.wait()
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.tableView.reloadInputViews()
         }
     }
 }

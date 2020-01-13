@@ -128,6 +128,7 @@ class NetworkController {
             
             do {
                 self.bearer = try JSONDecoder().decode(Bearer.self, from: data)
+                self.user = self.bearer?.user
             } catch {
                 completion(.noDecode)
                 return
@@ -178,18 +179,22 @@ class NetworkController {
     }
     
     func postNewRestaurant(restaurant: Restaurant, completion: @escaping (NetworkError?) -> Void = { _ in }) {
-        guard let bearer = bearer else {
+        guard let bearer = bearer,
+            let user = user else {
             completion(.noAuth)
             return
         }
         
-        let requestURL = baseURL.appendingPathComponent("restaurants")
+        var restaurantPOSTed = restaurant
+        restaurantPOSTed.id = user.id
+        
+        let requestURL = baseURL.appendingPathComponent("restaurants/")
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("\(bearer.token)", forHTTPHeaderField: "Authorization")
         do {
-            request.httpBody = try JSONEncoder().encode(restaurant)
+            request.httpBody = try JSONEncoder().encode(restaurantPOSTed)
         } catch {
             NSLog("Error POSTing restaurant on line \(#file) in \(#line): \(error)")
             completion(.otherError)
@@ -204,6 +209,7 @@ class NetworkController {
             
             if let response = response as? HTTPURLResponse {
                 NSLog("response is \(response.statusCode)")
+                completion(.badAuth)
             }
             
             completion(nil)

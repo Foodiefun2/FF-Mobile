@@ -64,7 +64,7 @@ class AddRestaurantViewController: UIViewController {
                 return
         }
         
-        let restaurant = Restaurant(id: nil, userID: NetworkController.shared.user?.id, name: name, location: address, hours: "\(opens) - \(closes)", image: nil, cuisine: cuisine, reviews: [])
+        let restaurant = Restaurant(id: nil, userID: 12, name: name, location: address, image: nil, hours: nil, cuisine: cuisine, reviews: nil)
         
         NetworkController.shared.postNewRestaurant(restaurant: restaurant)
         
