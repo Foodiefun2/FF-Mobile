@@ -9,10 +9,12 @@
 import Foundation
 
 struct Rating: Codable {
-    var id, restaurantID, userID: Int
+    var id: Int?
+    var restaurantID, userID: Int
     var foodRating, drinksRating, decorRating, serviceRating, cleanlinessRating, vibe: String
     
     enum RatingCodingKeys: String, CodingKey {
+        case id
         case foodRating = "food_rating"
         case drinksRating = "drinks_rating"
         case decorRating = "decor_rating"
