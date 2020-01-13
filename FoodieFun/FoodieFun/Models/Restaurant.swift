@@ -10,10 +10,10 @@ import Foundation
 
 struct Restaurant: Codable {
     var id, userID: Int?
-    var name, location, hours: String
-    var image: String?
+    var name, location: String
+    var image, hours: String?
     var cuisine: String
-    var reviews: [Review]
+    var reviews: [Review]?
     
     enum RestaurantCodingKeys: String, CodingKey {
         case image = "img"
