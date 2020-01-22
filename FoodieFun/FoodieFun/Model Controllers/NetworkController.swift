@@ -30,6 +30,14 @@ class NetworkController {
     var user: User?
     static let shared = NetworkController()
     
+    
+    let decoder: JSONDecoder = {
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        return jsonDecoder
+    }()
+    
+    
     // MARK: - AUTH/Sign Up
     func signUpNewUser(user: User, completion: @escaping (NetworkError?) -> Void) {
         self.user = user
