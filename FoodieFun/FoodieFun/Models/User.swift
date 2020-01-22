@@ -11,4 +11,9 @@ import Foundation
 struct User: Codable {
     var id: Int?
     var username, password, email, location: String
+    
+    
+    var foodieId: Int {
+        return id ?? 0
+    }
 }
